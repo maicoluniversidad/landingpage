@@ -39,7 +39,6 @@
         padding: 0;
     }
 
-    /* Clases de Utilidad y Colores Personalizados */
     .fw-black {
         font-weight: 900;
     }
@@ -66,10 +65,6 @@
 
     .bg-senyera {
         background-color: var(--fcb-senyera) !important;
-    }
-
-    .border-grana {
-        border-color: var(--fcb-grana) !important;
     }
 
     .border-grana-left {
@@ -104,7 +99,7 @@
         letter-spacing: 1px;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         color: #ffffff;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: 900;
         text-decoration: none;
     }
@@ -125,8 +120,7 @@
         text-decoration: none;
     }
 
-    .navbar-fcb .nav-link:hover,
-    .navbar-fcb .nav-link.active {
+    .navbar-fcb .nav-link:hover {
         color: var(--fcb-senyera) !important;
         background-color: rgba(0, 0, 0, 0.2);
     }
@@ -162,7 +156,7 @@
         padding: 0.4rem 0.9rem;
         border-radius: 50rem;
         text-transform: uppercase;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .section-title {
@@ -173,7 +167,6 @@
         margin-bottom: 15px;
     }
 
-    /* Estilos de maquetación y botones */
     .grid-layout {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -198,58 +191,13 @@
         background-color: #800033;
     }
 
-    /* ==========================================
-       Componentes Específicos
-       ========================================== */
-    .combo-card {
+    .combo-card, .copy-color-card {
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .combo-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
-    }
-
-    .copy-color-card {
-        transition: transform 0.2s ease;
-    }
-
-    .copy-color-card:hover {
+    .combo-card:hover, .copy-color-card:hover {
         transform: translateY(-4px);
-    }
-
-    .discord-scale-box {
-        background: linear-gradient(135deg, #0a0f1d 0%, #111c33 100%);
-    }
-
-    .guideline-h {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        height: 1px;
-        border-top: 1px dashed rgba(255, 255, 255, 0.3);
-        pointer-events: none;
-    }
-
-    .guideline-v {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 1px;
-        border-left: 1px dashed rgba(255, 255, 255, 0.3);
-        pointer-events: none;
-    }
-
-    .app-icon-square {
-        width: 85px;
-        height: 85px;
-        border-radius: 20px;
-    }
-
-    .app-icon-circle {
-        border-radius: 50%;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
     }
 
     /* Pre-footer / HubSpot Embed Form */
@@ -260,17 +208,17 @@
         border: none;
     }
 
-    /* ==========================================
-       Footer
-       ========================================== */
+    /* Footer */
     .footer-fcb {
         background-color: var(--fcb-dark);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 4px solid var(--fcb-senyera);
         color: #ffffff;
-        padding: 30px 5%;
+        padding: 35px 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .footer-fcb a {
@@ -287,31 +235,34 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7SCVWGP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- 1. HEADER / NAVBAR -->
+  <!-- SECCIÓN 01: HEADER / NAVBAR -->
   <header class="navbar-fcb">
-    <a href="#hero" class="navbar-brand fw-black">GAMEKEYS <span class="text-senyera">FCB</span></a>
+    <div>
+      <span class="badge-seccion" style="background: rgba(255,255,255,0.2); color: #fff; margin-bottom: 0;">01. HEADER</span>
+      <a href="#hero" class="navbar-brand fw-black" style="margin-left: 10px;">GAMEKEYS <span class="text-senyera">FCB</span></a>
+    </div>
     <div class="nav-container">
-      <a href="#hero" class="nav-link">01. Inicio</a>
-      <a href="#beneficios" class="nav-link">02. Ventajas</a>
-      <a href="#faq" class="nav-link">08. FAQ</a>
+      <a href="#hero" class="nav-link">Inicio</a>
+      <a href="#beneficios" class="nav-link">Ventajas</a>
+      <a href="#faq" class="nav-link">FAQ</a>
       <a href="https://wa.me/123456789" id="btn-whatsapp" class="btn-fcb bg-senyera text-blau" target="_blank" style="padding: 8px 16px;">WhatsApp Soporte</a>
     </div>
   </header>
 
-  <!-- 2. HERO SECTION -->
-  <section id="hero" class="brand-section" style="text-align: center; margin-top: 40px;">
+  <!-- SECCIÓN 02: HERO SECTION -->
+  <section id="hero" class="brand-section" style="text-align: center; margin-top: 20px;">
     <div class="card-section border-grana-left">
-      <span class="badge-seccion">01. CATÁLOGO DIGITAL</span>
+      <span class="badge-seccion">02. HERO / PRINCIPAL</span>
       <h1 class="section-title fw-black line-height-tight">Consigue tus Videojuegos Favoritos al Mejor Precio</h1>
       <p style="font-size: 1.1rem; color: #555;">Claves digitales 100% oficiales para Steam, Xbox, PlayStation y Nintendo con entrega instantánea.</p>
       <a href="#cta2" id="btn-comprar-key" class="btn-fcb bg-grana" style="margin-top: 20px;">Ver Ofertas Flash</a>
     </div>
   </section>
 
-  <!-- 3. BENEFICIOS -->
+  <!-- SECCIÓN 03: BENEFICIOS -->
   <section id="beneficios" class="brand-section">
     <div class="card-section border-left-senyera">
-      <span class="badge-seccion">02. VENTAJAS OFICIALES</span>
+      <span class="badge-seccion">03. BENEFICIOS Y VENTAJAS</span>
       <h2 class="section-title">¿Por qué elegirnos?</h2>
       <div class="grid-layout">
         <div class="combo-card" style="padding: 20px; background: #f9fbfd; border-radius: 10px;">
@@ -330,21 +281,21 @@
     </div>
   </section>
 
-  <!-- 4. CTA 1 -->
+  <!-- SECCIÓN 04: CTA INTERMEDIO -->
   <section id="cta1" class="brand-section" style="text-align: center;">
     <div class="card-section border-grana-left">
-      <span class="badge-seccion">03. PROMOCIÓN DE LA SEMANA</span>
+      <span class="badge-seccion">04. LLAMADO A LA ACCIÓN (CTA 1)</span>
       <h2 class="section-title">¿Listo para jugar hoy mismo?</h2>
       <p>Aprovecha hasta un 70% de descuento en títulos seleccionados de esta semana.</p>
       <button id="click_cta_principal" class="btn-fcb bg-blau" style="margin-top: 15px;">Explorar Catálogo</button>
     </div>
   </section>
 
-  <!-- 5. EXPLICACIÓN -->
+  <!-- SECCIÓN 05: EXPLICACIÓN (CÓMO FUNCIONA) -->
   <section id="explicacion" class="brand-section">
     <div class="card-section border-left-senyera">
-      <span class="badge-seccion">04. GUÍA DE PROCESO</span>
-      <h2 class="section-title">¿Cómo funciona?</h2>
+      <span class="badge-seccion">05. CÓMO FUNCIONA (EXPLICACIÓN)</span>
+      <h2 class="section-title">Guía de Compra en 3 Pasos</h2>
       <div class="grid-layout">
         <div class="copy-color-card" style="padding: 20px; background: #f9fbfd; border-radius: 10px;">
           <span class="text-grana fw-black" style="font-size: 1.5rem;">01.</span>
@@ -365,10 +316,10 @@
     </div>
   </section>
 
-  <!-- 6. TESTIMONIOS -->
+  <!-- SECCIÓN 06: TESTIMONIOS -->
   <section id="testimonios" class="brand-section">
     <div class="card-section border-grana-left">
-      <span class="badge-seccion">05. EXPERIENCIA DE USUARIOS</span>
+      <span class="badge-seccion">06. TESTIMONIOS Y OPINIONES</span>
       <h2 class="section-title">Opiniones de otros Gamers</h2>
       <div class="grid-layout">
         <div style="padding: 20px; background: #f9fbfd; border-radius: 10px;">
@@ -383,20 +334,20 @@
     </div>
   </section>
 
-  <!-- 7. CTA 2 -->
+  <!-- SECCIÓN 07: CTA 2 (OFERTA DEL DÍA) -->
   <section id="cta2" class="brand-section" style="text-align: center;">
     <div class="card-section border-left-senyera">
-      <span class="badge-seccion">06. OFERTA DESTACADA</span>
+      <span class="badge-seccion">07. LLAMADO A LA ACCIÓN (CTA 2)</span>
       <h2 class="section-title">Elden Ring - PC Steam Key</h2>
       <p style="font-size: 2rem; font-weight: 900;" class="text-grana">$29.99 USD <span style="font-size: 1.1rem; text-decoration: line-through; color: #888;">$59.99</span></p>
       <button id="btn-oferta-dia" class="btn-fcb bg-grana" style="margin-top: 15px;">Comprar Ahora</button>
     </div>
   </section>
 
-  <!-- 8. FAQ -->
+  <!-- SECCIÓN 08: PREGUNTAS FRECUENTES (FAQ) -->
   <section id="faq" class="brand-section">
     <div class="card-section border-grana-left">
-      <span class="badge-seccion">07. PREGUNTAS FRECUENTES</span>
+      <span class="badge-seccion">08. PREGUNTAS FRECUENTES (FAQ)</span>
       <h2 class="section-title">Soporte y Dudas</h2>
       <div class="btn-faq" style="margin-bottom: 15px; padding: 15px; background: #f9fbfd; border-radius: 8px;">
         <strong class="text-blau">¿Las claves tienen restricción regional?</strong>
@@ -409,10 +360,10 @@
     </div>
   </section>
 
-  <!-- 9. PRE-FOOTER (FORMULARIO HUBSPOT) -->
+  <!-- SECCIÓN 09: PRE-FOOTER (FORMULARIO CRM HUBSPOT) -->
   <section id="prefooter" class="brand-section" style="text-align: center;">
     <div class="card-section border-left-senyera">
-      <span class="badge-seccion">08. BOLETÍN OFICIAL</span>
+      <span class="badge-seccion">09. PRE-FOOTER (FORMULARIO CRM)</span>
       <h2 class="section-title">Recibe Ofertas Exclusivas en tu Correo</h2>
       <p>Suscríbete a nuestro boletín para recibir códigos de descuento semanales.</p>
 
@@ -422,9 +373,12 @@
     </div>
   </section>
 
-  <!-- 10. FOOTER -->
+  <!-- SECCIÓN 10: FOOTER -->
   <footer class="footer-fcb">
-    <p>© 2026 GameKeys Store. FC Barcelona Branding Edition.</p>
+    <div>
+      <span class="badge-seccion" style="background: rgba(255,255,255,0.2); color: var(--fcb-senyera); margin-bottom: 5px;">10. FOOTER</span>
+      <p style="margin: 0;">© 2026 GameKeys Store. FC Barcelona Branding Edition.</p>
+    </div>
     <div>
       <a href="https://facebook.com" id="red-facebook" target="_blank">Facebook</a>
       <a href="https://instagram.com" id="red-instagram" target="_blank">Instagram</a>
