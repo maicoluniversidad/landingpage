@@ -1,31 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Landing Page</title>
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T7SCVWGP');</script>
-    
-    <!-- End Google Tag Manager -->
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameKeys Store - Claves Digitales</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #121214; color: #fff; }
+    header, footer { background-color: #18181c; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+    .btn { background-color: #8257e5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; border: none; cursor: pointer; display: inline-block; }
+    .btn:hover { background-color: #996dff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card { background-color: #202024; padding: 20px; border-radius: 8px; border: 1px solid #29292e; text-align: center; }
+    .faq-item { background: #202024; padding: 15px; margin-bottom: 10px; border-radius: 6px; cursor: pointer; }
+  </style>
+  <!-- Google Tag Manager / Analytics Script aquí -->
+   
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7SCVWGP"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Aquí va el resto del contenido visual de tu página -->
-    <h1>Bienvenido a mi Landing Page</h1>
-    <!-- Botón CTA Principal -->
-<button type="button" id="btn-cta-principal" class="btn-cta">Inscribirme Ahora</button>
-<script src="https://js.hsforms.net/forms/embed/52187247.js" defer></script>
-<div class="hs-form-frame" data-region="na1" data-form-id="1725c035-e045-46cc-81d0-d834608785ab" data-portal-id="52187247"></div>
+  <!-- 1. HEADER -->
+  <header>
+    <h2>🎮 GameKeys Store</h2>
+    <nav>
+      <a href="#hero" style="color:white; margin-right:15px; text-decoration:none;">Inicio</a>
+      <a href="#beneficios" style="color:white; margin-right:15px; text-decoration:none;">Beneficios</a>
+      <a href="#faq" style="color:white; margin-right:15px; text-decoration:none;">FAQ</a>
+      <a href="https://wa.me/123456789" id="btn-whatsapp" class="btn" target="_blank">Soporte WhatsApp</a>
+    </nav>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="hero" class="container" style="text-align: center;">
+    <h1>Consigue tus Videojuegos Favoritos al Mejor Precio</h1>
+    <p>Claves digitales 100% oficiales para Steam, Xbox, PlayStation y Nintendo con entrega instantánea.</p>
+    <a href="#cta2" id="btn-comprar-key" class="btn" style="font-size: 1.2rem;">Ver Ofertas Flash</a>
+  </section>
+
+  <!-- 3. BENEFICIOS -->
+  <section id="beneficios" class="container">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="grid">
+      <div class="card">⚡ <h3>Entrega Instantánea</h3><p>Recibe tu código digital inmediatamente en pantalla y correo.</p></div>
+      <div class="card">🔒 <h3>Pagos 100% Seguros</h3><p>Transacciones cifradas con tarjeta, PayPal o PSE.</p></div>
+      <div class="card">🛡️ <h3>Garantía Global</h3><p>Claves oficiales y soporte técnico disponible 24/7.</p></div>
+    </div>
+  </section>
+
+  <!-- 4. CTA 1 -->
+  <section id="cta1" class="container" style="background: #202024; text-align: center; border-radius: 8px;">
+    <h2>¿Listo para jugar hoy mismo?</h2>
+    <p>Aprovecha hasta un 70% de descuento en títulos seleccionados de esta semana.</p>
+    <button id="click_cta_principal" class="btn">Explorar Catálogo</button>
+  </section>
+
+  <!-- 5. EXPLICACIÓN (CÓMO FUNCIONA) -->
+  <section id="explicacion" class="container">
+    <h2>¿Cómo funciona?</h2>
+    <div class="grid">
+      <div class="card"><strong>1. Elige tu juego</strong><p>Busca entre más de 5,000 títulos.</p></div>
+      <div class="card"><strong>2. Realiza el pago</strong><p>Usa tu método de preferencia.</p></div>
+      <div class="card"><strong>3. Canjea tu código</strong><p>Ingresa la clave en tu plataforma y listo.</p></div>
+    </div>
+  </section>
+
+  <!-- 6. TESTIMONIOS -->
+  <section id="testimonios" class="container">
+    <h2>Opiniones de otros Gamers</h2>
+    <div class="grid">
+      <div class="card"><p>"Compré el GTA V y la clave me llegó en 5 segundos. Excelente servicio."</p><strong>- Carlos R.</strong></div>
+      <div class="card"><p>"Precios imbatibles para pases de batalla y tarjetas de Xbox."</p><strong>- Laura M.</strong></div>
+    </div>
+  </section>
+
+  <!-- 7. CTA 2 -->
+  <section id="cta2" class="container" style="text-align: center;">
+    <h2>Oferta Destacada del Día</h2>
+    <div class="card" style="max-width: 400px; margin: auto;">
+      <h3>Elden Ring - PC Steam Key</h3>
+      <p style="font-size: 1.5rem; color: #8257e5; font-weight: bold;">$29.99 USD <span style="text-decoration: line-through; color: #888; font-size: 1rem;">$59.99</span></p>
+      <button id="btn-oferta-dia" class="btn">Comprar Ahora</button>
+    </div>
+  </section>
+
+  <!-- 8. FAQ (PREGUNTAS FRECUENTES) -->
+  <section id="faq" class="container">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item" class="btn-faq"><strong>¿Las claves tienen restricción regional?</strong><p>Especificamos siempre si la clave es Global o de una región en particular.</p></div>
+    <div class="faq-item" class="btn-faq"><strong>¿Qué hago si un código no funciona?</strong><p>Nuestro equipo de soporte reemplaza la clave de inmediato.</p></div>
+  </section>
+
+  <!-- 9. PRE-FOOTER (HUB SPOT FORM / BOLETÍN) -->
+   <section id="prefooter" class="container" style="background: #18181c; text-align: center; border-radius: 8px;">
+    <h2>Recibe Ofertas Exclusivas en tu Correo</h2>
+    <p>Suscríbete a nuestro boletín para códigos de descuento semanales.</p>
+    
+    <script src="https://js.hsforms.net/forms/embed/52187247.js" defer></script>
+    <div class="hs-form-frame" data-region="na1" data-form-id="1725c035-e045-46cc-81d0-d834608785ab" data-portal-id="52187247"></div>
+  </section>
+    <!-- PEGA AQUÍ EL CÓDIGO DE TU FORMULARIO DE HUBSPOT -->
+    <div id="hubspot-form-container">
+      <p><em>Formulario conectado con HubSpot CRM</em></p>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER -->
+  <footer>
+    <p>© 2026 GameKeys Store. Todos los derechos reservados.</p>
+    <div>
+      <a href="https://facebook.com" id="red-facebook" style="color:white; margin-left:10px; text-decoration:none;">Facebook</a>
+      <a href="https://instagram.com" id="red-instagram" style="color:white; margin-left:10px; text-decoration:none;">Instagram</a>
+    </div>
+  </footer>
+
 </body>
 </html>
