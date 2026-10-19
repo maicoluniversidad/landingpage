@@ -1,0 +1,15 @@
+.btn-cta {
+  background-color: #3b82f6; /* Azul primario */
+  color: #ffffff;            /* Texto blanco */
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;        /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: #2563eb; /* Azul más oscuro al pasar el mouse */
+}
