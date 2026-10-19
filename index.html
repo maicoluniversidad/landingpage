@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GameKeys Store - Claves Digitales</title>
-  
+  <title>GameKeys Store - Identidad & Claves Digitales</title>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,25 +13,325 @@
   })(window,document,'script','dataLayer','GTM-T7SCVWGP');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Fuente Institucional Inter (Identidad Barça) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background-color: #121214; color: #ffffff !important; }
-    header, footer { background-color: #18181c; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #29292e; }
-    footer { border-top: 1px solid #29292e; border-bottom: none; }
-    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-    .btn { background-color: #8257e5; color: white !important; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; border: none; cursor: pointer; display: inline-block; }
-    .btn:hover { background-color: #996dff; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-    .card { background-color: #202024; padding: 20px; border-radius: 8px; border: 1px solid #29292e; text-align: center; }
-    .faq-item { background: #202024; padding: 15px; margin-bottom: 10px; border-radius: 6px; cursor: pointer; border: 1px solid #29292e; }
-    
-    /* REGLAS DE ALTO CONTRASTE Y LEGBILIDAD PARA TEXTOS Y HUBSPOT */
-    h1, h2, h3, p, span, strong, label { color: #ffffff !important; }
-    a { color: #ffffff; text-decoration: none; }
-    #prefooter { background: #18181c; text-align: center; border-radius: 8px; padding: 40px 20px; margin-top: 30px; margin-bottom: 30px; }
-    .hs-form-frame, iframe { max-width: 600px; margin: 20px auto 0 auto; width: 100%; border: none; }
-    .hs-form label, .hs-form-field label, .hs-richtext, .hs-main-font-element { color: #ffffff !important; font-weight: bold; }
-    .hs-input, input[type="text"], input[type="email"] { background-color: #202024 !important; color: #ffffff !important; border: 1px solid #4a4a6a !important; padding: 10px !important; border-radius: 6px !important; width: 100%; margin-top: 5px; }
+    /* PALETA OFICIAL & RESET (IDENTIDAD BARCELONA) */
+    :root {
+      --blau: #004D98;
+      --grana: #A50044;
+      --senyera: #EDBB00;
+      --bg-dark: #0b0e14;
+      --card-bg: #131822;
+      --border-color: #212836;
+      --text-main: #ffffff;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main) !important;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    /* HEADER / NAV */
+    header {
+      background-color: rgba(11, 14, 20, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--blau);
+    }
+
+    .brand-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+    }
+    .brand-title span {
+      color: var(--senyera);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      color: var(--senyera);
+    }
+
+    .btn-whatsapp-nav {
+      background: linear-gradient(135deg, var(--blau) 0%, #003366 100%);
+      color: #ffffff !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-whatsapp-nav:hover {
+      background: var(--grana);
+    }
+
+    /* CONTENEDOR SECCIONES */
+    .section-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* BADGES DE SECCIÓN NUMERADOS (ESTILO MANUAL) */
+    .section-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--senyera);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      color: var(--text-main) !important;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+    }
+
+    /* HERO */
+    .hero-section {
+      text-align: center;
+      padding: 100px 20px 80px 20px;
+      background: radial-gradient(circle at top, rgba(0, 77, 152, 0.25) 0%, transparent 70%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-hero {
+      background-color: var(--grana);
+      color: #ffffff !important;
+      padding: 16px 36px;
+      font-size: 1rem;
+      font-weight: 800;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 20px rgba(165, 0, 68, 0.4);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .btn-hero:hover {
+      background-color: #d10056;
+      transform: translateY(-2px);
+    }
+
+    /* GRIDS & TARJETAS */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card-barca {
+      background-color: var(--card-bg);
+      padding: 35px 30px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card-barca::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--blau);
+    }
+
+    .card-barca:hover {
+      border-color: var(--senyera);
+      transform: translateY(-3px);
+    }
+
+    .card-barca h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text-main) !important;
+    }
+
+    .card-barca p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* PASOS EXPLICACIÓN */
+    .step-number {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--senyera);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* OFERTA DESTACADA */
+    .card-oferta {
+      background: linear-gradient(135deg, #131822 0%, #1a0814 100%);
+      border: 2px solid var(--grana);
+      max-width: 450px;
+      margin: 30px auto 0 auto;
+      text-align: center;
+    }
+
+    .price-tag {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--senyera) !important;
+      margin: 15px 0;
+    }
+
+    .price-old {
+      font-size: 1.1rem;
+      text-decoration: line-through;
+      color: var(--text-muted) !important;
+      margin-left: 10px;
+      font-weight: 400;
+    }
+
+    /* FAQ */
+    .faq-card {
+      background-color: var(--card-bg);
+      padding: 22px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 15px;
+    }
+
+    .faq-card strong {
+      color: var(--senyera) !important;
+      font-size: 1.05rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* PRE-FOOTER Y HUBSPOT FORM */
+    #prefooter {
+      background: linear-gradient(180deg, var(--card-bg) 0%, #0a0d13 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .hs-form-frame, iframe {
+      max-width: 600px;
+      margin: 25px auto 0 auto;
+      width: 100%;
+      border: none;
+    }
+
+    /* FORZAR LEGIBILIDAD EN HUBSPOT */
+    .hs-form label, .hs-form-field label, .hs-richtext, .hs-main-font-element {
+      color: #ffffff !important;
+      font-weight: 700 !important;
+    }
+
+    .hs-input, input[type="text"], input[type="email"] {
+      background-color: #0b0e14 !important;
+      color: #ffffff !important;
+      border: 1px solid var(--border-color) !important;
+      padding: 12px !important;
+      border-radius: 6px !important;
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .hs-input:focus {
+      border-color: var(--senyera) !important;
+      outline: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #06080c;
+      padding: 35px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid var(--grana);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      margin-left: 15px;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: var(--senyera);
+    }
   </style>
 </head>
 <body>
@@ -43,90 +343,134 @@
 
   <!-- 1. HEADER -->
   <header>
-    <h2>🎮 GameKeys Store</h2>
+    <div class="brand-title">GAMEKEYS <span>FC</span></div>
     <nav>
-      <a href="#hero" style="margin-right:15px;">Inicio</a>
-      <a href="#beneficios" style="margin-right:15px;">Beneficios</a>
-      <a href="#faq" style="margin-right:15px;">FAQ</a>
-      <a href="https://wa.me/123456789" id="btn-whatsapp" class="btn" target="_blank">Soporte WhatsApp</a>
+      <a href="#hero">01. Inicio</a>
+      <a href="#beneficios">02. Ventajas</a>
+      <a href="#faq">08. FAQ</a>
+      <a href="https://wa.me/123456789" id="btn-whatsapp" class="btn-whatsapp-nav" target="_blank">Soporte WhatsApp</a>
     </nav>
   </header>
 
   <!-- 2. HERO SECTION -->
-  <section id="hero" class="container" style="text-align: center;">
-    <h1>Consigue tus Videojuegos Favoritos al Mejor Precio</h1>
-    <p style="margin-top: 10px; margin-bottom: 20px;">Claves digitales 100% oficiales para Steam, Xbox, PlayStation y Nintendo con entrega instantánea.</p>
-    <a href="#cta2" id="btn-comprar-key" class="btn" style="font-size: 1.2rem;">Ver Ofertas Flash</a>
+  <section id="hero" class="hero-section">
+    <span class="section-badge">01. CATÁLOGO DIGITAL</span>
+    <h1 class="hero-title">Consigue tus Videojuegos Favoritos al Mejor Precio</h1>
+    <p class="section-desc" style="margin: auto;">Claves digitales 100% oficiales para Steam, Xbox, PlayStation y Nintendo con entrega instantánea.</p>
+    <a href="#cta2" id="btn-comprar-key" class="btn-hero">Ver Ofertas Flash</a>
   </section>
 
   <!-- 3. BENEFICIOS -->
-  <section id="beneficios" class="container">
-    <h2 style="text-align: center;">¿Por qué elegirnos?</h2>
-    <div class="grid">
-      <div class="card">⚡ <h3 style="margin: 10px 0;">Entrega Instantánea</h3><p>Recibe tu código digital inmediatamente en pantalla y correo.</p></div>
-      <div class="card">🔒 <h3 style="margin: 10px 0;">Pagos 100% Seguros</h3><p>Transacciones cifradas con tarjeta, PayPal o PSE.</p></div>
-      <div class="card">🛡️ <h3 style="margin: 10px 0;">Garantía Global</h3><p>Claves oficiales y soporte técnico disponible 24/7.</p></div>
+  <section id="beneficios" class="section-container">
+    <span class="section-badge">02. VENTAJAS OFICIALES</span>
+    <h2 class="section-title">¿Por qué elegirnos?</h2>
+    <div class="grid-3">
+      <div class="card-barca">
+        <h3>⚡ Entrega Instantánea</h3>
+        <p>Recibe tu código digital inmediatamente en pantalla y correo electrónico.</p>
+      </div>
+      <div class="card-barca">
+        <h3>🔒 Pagos 100% Seguros</h3>
+        <p>Transacciones cifradas con tarjeta de crédito, PayPal o PSE.</p>
+      </div>
+      <div class="card-barca">
+        <h3>🛡️ Garantía Global</h3>
+        <p>Claves oficiales y soporte técnico personalizado disponible 24/7.</p>
+      </div>
     </div>
   </section>
 
   <!-- 4. CTA 1 -->
-  <section id="cta1" class="container" style="background: #202024; text-align: center; border-radius: 8px;">
-    <h2>¿Listo para jugar hoy mismo?</h2>
-    <p style="margin: 10px 0 20px 0;">Aprovecha hasta un 70% de descuento en títulos seleccionados de esta semana.</p>
-    <button id="click_cta_principal" class="btn">Explorar Catálogo</button>
+  <section id="cta1" class="section-container" style="text-align: center;">
+    <span class="section-badge">03. PROMOCIÓN DE LA SEMANA</span>
+    <h2 class="section-title">¿Listo para jugar hoy mismo?</h2>
+    <p class="section-desc" style="margin: auto;">Aprovecha hasta un 70% de descuento en títulos seleccionados de esta semana.</p>
+    <button id="click_cta_principal" class="btn-hero">Explorar Catálogo</button>
   </section>
 
-  <!-- 5. EXPLICACIÓN (CÓMO FUNCIONA) -->
-  <section id="explicacion" class="container">
-    <h2 style="text-align: center;">¿Cómo funciona?</h2>
-    <div class="grid">
-      <div class="card"><strong>1. Elige tu juego</strong><p style="margin-top: 5px;">Busca entre más de 5,000 títulos.</p></div>
-      <div class="card"><strong>2. Realiza el pago</strong><p style="margin-top: 5px;">Usa tu método de preferencia.</p></div>
-      <div class="card"><strong>3. Canjea tu código</strong><p style="margin-top: 5px;">Ingresa la clave en tu plataforma y listo.</p></div>
+  <!-- 5. EXPLICACIÓN -->
+  <section id="explicacion" class="section-container">
+    <span class="section-badge">04. GUÍA DE PROCESO</span>
+    <h2 class="section-title">¿Cómo funciona?</h2>
+    <div class="grid-3">
+      <div class="card-barca">
+        <span class="step-number">01.</span>
+        <h3>Elige tu juego</h3>
+        <p>Busca entre más de 5,000 títulos disponibles en nuestro catálogo.</p>
+      </div>
+      <div class="card-barca">
+        <span class="step-number">02.</span>
+        <h3>Realiza el pago</h3>
+        <p>Usa tu método de preferencia con cifrado de seguridad bancaria.</p>
+      </div>
+      <div class="card-barca">
+        <span class="step-number">03.</span>
+        <h3>Canjea tu código</h3>
+        <p>Ingresa la clave digital en tu consola o PC y comienza a jugar.</p>
+      </div>
     </div>
   </section>
 
   <!-- 6. TESTIMONIOS -->
-  <section id="testimonios" class="container">
-    <h2 style="text-align: center;">Opiniones de otros Gamers</h2>
-    <div class="grid">
-      <div class="card"><p>"Compré el GTA V y la clave me llegó en 5 segundos. Excelente servicio."</p><strong style="display:block; margin-top:10px;">- Carlos R.</strong></div>
-      <div class="card"><p>"Precios imbatibles para pases de batalla y tarjetas de Xbox."</p><strong style="display:block; margin-top:10px;">- Laura M.</strong></div>
+  <section id="testimonios" class="section-container">
+    <span class="section-badge">05. EXPERIENCIA DE USUARIOS</span>
+    <h2 class="section-title">Opiniones de otros Gamers</h2>
+    <div class="grid-3">
+      <div class="card-barca">
+        <p>"Compré el GTA V y la clave me llegó en 5 segundos. Excelente servicio."</p>
+        <strong style="display:block; margin-top:15px; color: var(--senyera);">- Carlos R.</strong>
+      </div>
+      <div class="card-barca">
+        <p>"Precios imbatibles para pases de batalla y tarjetas de Xbox."</p>
+        <strong style="display:block; margin-top:15px; color: var(--senyera);">- Laura M.</strong>
+      </div>
     </div>
   </section>
 
-  <!-- 7. CTA 2 -->
-  <section id="cta2" class="container" style="text-align: center;">
-    <h2>Oferta Destacada del Día</h2>
-    <div class="card" style="max-width: 400px; margin: 20px auto 0 auto;">
+  <!-- 7. CTA 2 (OFERTA DEL DÍA) -->
+  <section id="cta2" class="section-container" style="text-align: center;">
+    <span class="section-badge">06. OFERTA DESTACADA</span>
+    <h2 class="section-title">Descuento Especial</h2>
+    <div class="card-barca card-oferta">
       <h3>Elden Ring - PC Steam Key</h3>
-      <p style="font-size: 1.5rem; color: #8257e5 !important; font-weight: bold; margin: 10px 0;">$29.99 USD <span style="text-decoration: line-through; color: #888 !important; font-size: 1rem;">$59.99</span></p>
-      <button id="btn-oferta-dia" class="btn">Comprar Ahora</button>
+      <div class="price-tag">$29.99 USD <span class="price-old">$59.99</span></div>
+      <button id="btn-oferta-dia" class="btn-hero" style="margin-top: 10px;">Comprar Ahora</button>
     </div>
   </section>
 
-  <!-- 8. FAQ (PREGUNTAS FRECUENTES) -->
-  <section id="faq" class="container">
-    <h2 style="text-align: center; margin-bottom: 20px;">Preguntas Frecuentes</h2>
-    <div class="faq-item btn-faq"><strong>¿Las claves tienen restricción regional?</strong><p style="margin-top: 5px;">Especificamos siempre si la clave es Global o de una región en particular.</p></div>
-    <div class="faq-item btn-faq"><strong>¿Qué hago si un código no funciona?</strong><p style="margin-top: 5px;">Nuestro equipo de soporte reemplaza la clave de inmediato.</p></div>
+  <!-- 8. FAQ -->
+  <section id="faq" class="section-container">
+    <span class="section-badge">07. PREGUNTAS FRECUENTES</span>
+    <h2 class="section-title">Soporte y Dudas</h2>
+    <div class="faq-card btn-faq">
+      <strong>¿Las claves tienen restricción regional?</strong>
+      <p style="color: var(--text-muted);">Especificamos siempre si la clave es Global o de una región en particular antes de completar tu compra.</p>
+    </div>
+    <div class="faq-card btn-faq">
+      <strong>¿Qué hago si un código no funciona?</strong>
+      <p style="color: var(--text-muted);">Nuestro equipo de soporte técnico verifica y reemplaza la clave de inmediato.</p>
+    </div>
   </section>
 
   <!-- 9. PRE-FOOTER (FORMULARIO HUBSPOT) -->
-  <section id="prefooter" class="container">
-    <h2>Recibe Ofertas Exclusivas en tu Correo</h2>
-    <p style="margin-top: 5px; margin-bottom: 20px;">Suscríbete a nuestro boletín para códigos de descuento semanales.</p>
-    
-    <script src="https://js.hsforms.net/forms/embed/52187247.js" defer></script>
-    <div class="hs-form-frame" data-region="na1" data-form-id="1725c035-e045-46cc-81d0-d834608785ab" data-portal-id="52187247"></div>
-  </section>
+  <div class="section-container">
+    <section id="prefooter">
+      <span class="section-badge">08. BOLETÍN OFICIAL</span>
+      <h2 class="section-title">Recibe Ofertas Exclusivas en tu Correo</h2>
+      <p class="section-desc" style="margin: auto;">Suscríbete a nuestro boletín para códigos de descuento semanales.</p>
+
+      <!-- SCRIPT Y FRAME DE HUBSPOT EMBED -->
+      <script src="https://js.hsforms.net/forms/embed/52187247.js" defer></script>
+      <div class="hs-form-frame" data-region="na1" data-form-id="1725c035-e045-46cc-81d0-d834608785ab" data-portal-id="52187247"></div>
+    </section>
+  </div>
 
   <!-- 10. FOOTER -->
   <footer>
-    <p>© 2026 GameKeys Store. Todos los derechos reservados.</p>
+    <p>© 2026 GameKeys Store. Directrices de Identidad & Recursos Digitales.</p>
     <div>
-      <a href="https://facebook.com" id="red-facebook" style="margin-left:10px;">Facebook</a>
-      <a href="https://instagram.com" id="red-instagram" style="margin-left:10px;">Instagram</a>
+      <a href="https://facebook.com" id="red-facebook" target="_blank">Facebook</a>
+      <a href="https://instagram.com" id="red-instagram" target="_blank">Instagram</a>
     </div>
   </footer>
 
