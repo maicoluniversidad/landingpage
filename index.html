@@ -13,24 +13,32 @@
   })(window,document,'script','dataLayer','GTM-T7SCVWGP');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Fuente Institucional Inter (Identidad Barça) -->
+  <!-- Fuente Institucional Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    /* PALETA OFICIAL & RESET (IDENTIDAD BARCELONA) */
+    /* ---------------------------------------------------- */
+    /* BLOQUE DE VARIABLES DE COLOR Y ESTILO (:root)        */
+    /* ---------------------------------------------------- */
     :root {
+      /* Colores oficiales de marca */
       --blau: #004D98;
       --grana: #A50044;
       --senyera: #EDBB00;
+
+      /* Fondo y estructura */
       --bg-dark: #0b0e14;
       --card-bg: #131822;
       --border-color: #212836;
+
+      /* Tipografía */
       --text-main: #ffffff;
       --text-muted: #94a3b8;
     }
 
+    /* RESET & ESTILOS BASE */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -109,7 +117,7 @@
       background: var(--grana);
     }
 
-    /* CONTENEDOR SECCIONES */
+    /* CONTENEDORES Y ESTRUCTURA */
     .section-container {
       max-width: 1100px;
       margin: auto;
@@ -117,7 +125,6 @@
       border-bottom: 1px solid var(--border-color);
     }
 
-    /* BADGES DE SECCIÓN NUMERADOS (ESTILO MANUAL) */
     .section-badge {
       display: inline-block;
       font-size: 0.8rem;
@@ -142,7 +149,7 @@
       max-width: 700px;
     }
 
-    /* HERO */
+    /* HERO SECTION */
     .hero-section {
       text-align: center;
       padding: 100px 20px 80px 20px;
@@ -173,6 +180,8 @@
       letter-spacing: 1px;
       box-shadow: 0 4px 20px rgba(165, 0, 68, 0.4);
       transition: transform 0.2s, background-color 0.2s;
+      border: none;
+      cursor: pointer;
     }
 
     .btn-hero:hover {
@@ -180,7 +189,7 @@
       transform: translateY(-2px);
     }
 
-    /* GRIDS & TARJETAS */
+    /* GRID Y TARJETAS */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -225,7 +234,6 @@
       font-size: 0.95rem;
     }
 
-    /* PASOS EXPLICACIÓN */
     .step-number {
       font-size: 2rem;
       font-weight: 900;
@@ -234,7 +242,7 @@
       margin-bottom: 10px;
     }
 
-    /* OFERTA DESTACADA */
+    /* CARD OFERTA */
     .card-oferta {
       background: linear-gradient(135deg, #131822 0%, #1a0814 100%);
       border: 2px solid var(--grana);
@@ -274,7 +282,7 @@
       margin-bottom: 6px;
     }
 
-    /* PRE-FOOTER Y HUBSPOT FORM */
+    /* PRE-FOOTER Y HUBSPOT */
     #prefooter {
       background: linear-gradient(180deg, var(--card-bg) 0%, #0a0d13 100%);
       border: 1px solid var(--border-color);
@@ -290,7 +298,6 @@
       border: none;
     }
 
-    /* FORZAR LEGIBILIDAD EN HUBSPOT */
     .hs-form label, .hs-form-field label, .hs-richtext, .hs-main-font-element {
       color: #ffffff !important;
       font-weight: 700 !important;
@@ -427,7 +434,7 @@
     </div>
   </section>
 
-  <!-- 7. CTA 2 (OFERTA DEL DÍA) -->
+  <!-- 7. CTA 2 -->
   <section id="cta2" class="section-container" style="text-align: center;">
     <span class="section-badge">06. OFERTA DESTACADA</span>
     <h2 class="section-title">Descuento Especial</h2>
@@ -459,7 +466,6 @@
       <h2 class="section-title">Recibe Ofertas Exclusivas en tu Correo</h2>
       <p class="section-desc" style="margin: auto;">Suscríbete a nuestro boletín para códigos de descuento semanales.</p>
 
-      <!-- SCRIPT Y FRAME DE HUBSPOT EMBED -->
       <script src="https://js.hsforms.net/forms/embed/52187247.js" defer></script>
       <div class="hs-form-frame" data-region="na1" data-form-id="1725c035-e045-46cc-81d0-d834608785ab" data-portal-id="52187247"></div>
     </section>
